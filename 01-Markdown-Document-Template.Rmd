@@ -1,0 +1,60 @@
+---
+title: "RStudio Connect: Your First Markdown Document"
+output: html_document
+---
+![](./images/RStudio-Logo-Flat-small.png)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Creating Your First Connect Document
+The best way to get to know RStudio Connect is to use it. This template publishes a report that contains text, a table, and a graphic. 
+
+### Using The RStudio Desktop Integrated Development Environment (IDE) on RStudio.cloud
+We provisioned this template on your Connect server as a static document, but it is also available for you to edit and publish on RStudio.cloud. Simply open this RStudio.cloud project, and save it in your own space, and you'll have access to all the RStudio Connect templates. The rstudio.cloud project is here:
+
+https://rstudio.cloud/project/120177
+
+### Creating Markdown
+This template is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+### Including R Code In Your Document
+You can embed an R code chunk as shown below. You can place any valid R code here and its output will be included in your published R Markdown document.
+
+```{r r-code-block}
+
+## Place any valid R code here and its output will be shown in your published document
+## Don't forget to include any libraries you may need in your first code block.
+
+summary(cars)
+```
+
+### Previewing Your Document
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can find the **Knit** in the icon bar of the IDE as shown below.
+
+![](./images/Knit-button.jpg)
+
+Your output will appear either in the RStudio IDE *Viewer* pane or in a separate window, depending on the setting selected in from the settings menu as shown below
+
+![](./images/Knit-output-settings.jpg)
+
+### Including Plots
+
+You can also embed plots in your document. These plots can be ones made with any plotting package, including base R, ggplot2, plotly, or others.
+
+If this is your first time using the RStudio IDE, you may need to install any plotting packages you intend to use before invoking them. 
+
+```{r plotting-code, echo=FALSE}
+plot(pressure)
+
+## If this is the first time you've used the RStudio IDE, you may need to install 
+## the ggplot2 package to use it as a library. 
+
+# install.packages("ggplot2")
+# library(ggplot2)
+
+# ggplot(data=pressure, aes(x=temperature, y=pressure)) + geom_point()
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
